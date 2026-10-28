@@ -8,7 +8,7 @@ import com.qualcomm.robotcore.hardware.DcMotorSimple;
 import com.qualcomm.robotcore.hardware.Servo;
 import com.qualcomm.robotcore.hardware.ServoController;
 
-@TeleOp(name = "Biobuzz Teleop (Use this)")
+@TeleOp(name = "Biobuzz Teleop")
 public class BiobuzzTeleop extends LinearOpMode {
     @Override
     public void runOpMode() throws InterruptedException {
@@ -42,13 +42,9 @@ public class BiobuzzTeleop extends LinearOpMode {
         ControlHub_ServoController.pwmDisable();
         ExpansionHub_ServoController.pwmDisable();
 
-        // Reverse the right side motors. This may be wrong for your setup.
-        // If your robot moves backwards when commanded to go forwards,
-        // reverse the left side instead.
-        // See the note about this earlier on this page.
+
         BackLeft.setDirection(DcMotorSimple.Direction.REVERSE);
-        //FrontLeft.setDirection(DcMotorSimple.Direction.REVERSE);
-        //BackRight.setDirection(DcMotorSimple.Direction.REVERSE);
+
 
         Intake.setDirection(DcMotorSimple.Direction.REVERSE);
         Launcher.setDirection(DcMotorSimple.Direction.REVERSE);
