@@ -1,21 +1,13 @@
-package org.firstinspires.ftc.teamcode.TeleOp;
+package org.firstinspires.ftc.teamcode.Testing;
 
 import com.qualcomm.robotcore.eventloop.opmode.LinearOpMode;
 import com.qualcomm.robotcore.eventloop.opmode.TeleOp;
 import com.qualcomm.robotcore.hardware.DcMotor;
-import com.qualcomm.robotcore.hardware.Servo;
-import com.qualcomm.robotcore.hardware.ServoController;
 
 @TeleOp(name = "TestAuto5", group = "Testing")
 public class TestAuto5 extends LinearOpMode {
 
     private DcMotor WeeeMotor;
-
-    private Servo servo;
-
-
-    private ServoController ControlHub_ServoController;
-
     /**
      * This function is executed when this OpMode is selected from the Driver Station.
      */
@@ -47,14 +39,6 @@ public class TestAuto5 extends LinearOpMode {
 
 
         WeeeMotor = hardwareMap.get(DcMotor.class, "WeeeMotor");
-
-
-
-        ControlHub_ServoController = hardwareMap.get(ServoController.class, "Control Hub");
-
-        //Disable pwm
-        ControlHub_ServoController.pwmDisable();
-
 
         waitForStart();
         if (opModeIsActive()) {

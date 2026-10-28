@@ -1,11 +1,9 @@
-package org.firstinspires.ftc.teamcode.TeleOp;
+package org.firstinspires.ftc.teamcode.Testing;
 
 import com.qualcomm.robotcore.eventloop.opmode.LinearOpMode;
 import com.qualcomm.robotcore.eventloop.opmode.TeleOp;
 import com.qualcomm.robotcore.hardware.DcMotor;
 import com.qualcomm.robotcore.hardware.DcMotorEx;
-import com.qualcomm.robotcore.hardware.Servo;
-import com.qualcomm.robotcore.hardware.ServoController;
 
 import org.firstinspires.ftc.robotcore.external.navigation.CurrentUnit;
 
@@ -23,7 +21,6 @@ public class TeleOpSimpleMecanum extends LinearOpMode {
      */
     @Override
     public void runOpMode() {
-        boolean testMode;
         double D_Speed = 0.5;
         double halfSpeed = 0.5;
         double wheel_Speed = 1;
@@ -37,9 +34,6 @@ public class TeleOpSimpleMecanum extends LinearOpMode {
         float horizontalGp2_left;
         float verticalGp2_right;
         float horizontalGp2_right;
-        float pivot;
-
-        String aprilTagValue = "?";
 
         boolean debugInfo = true;
 
